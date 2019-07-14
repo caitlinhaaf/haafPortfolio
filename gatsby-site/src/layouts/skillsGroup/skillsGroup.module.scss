@@ -1,0 +1,15 @@
+@import "../../styles/variables";
+
+.grouping{
+  margin: 0 0 2rem 0;
+
+  &:last-child{
+    margin:0;
+  }
+}
+
+.grid{
+  display: flex;
+  flex-wrap: wrap;
+  // justify-content: space-around;
+}

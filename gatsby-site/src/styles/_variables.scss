@@ -1,0 +1,90 @@
+/*
+COLOUR PALLETTE
+*/
+$red: #B90504;
+$dkred: #9b0a09;
+$dkrred: #820202;
+$dkgrey: #333;
+$medgrey: #AAA;
+$ltgrey: #CCC;
+$vryltgrey: #EEE;
+
+/*
+FONTS
+*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Source+Sans+Pro:400,700");
+
+$hdrFont: normal 300 5rem/1.2em 'Montserrat Alternates', sans-serif;
+$subHdrFont: normal 300 2rem/1.2em 'Montserrat Alternates', sans-serif;
+$smHdrFont: normal 300 1.2rem/1.2em 'Montserrat Alternates', sans-serif;
+$bodyFont: normal 400 1rem/1.2em 'Source Sans Pro', sans-serif;
+
+$bottomShadow: 0px 2px 2px 1px rgba(0,0,0,.25);
+$bottomShadowHover: 0px 4px 4px 4px rgba(0,0,0,.25);
+$gradientBg: linear-gradient($red, $dkred);
+
+/*
+DARK VS. LIGHT STYLES
+*/
+$dkstyle: (background: $red, color: white, border: 0);
+$ltstyle: (background: white, color: $red, border: 1px solid $red);
+
+@mixin style($background, $color, $border){
+  background: $background;
+  color: $color;
+  border: $border;
+}
+// use case: @include style($dkstyle);
+
+
+/*
+BREAKPOINTS
+*/
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+// Tablets and small desktops
+$screen-lg-min: 992px;
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// Small devices
+@mixin sm {
+   @media (max-width: #{$screen-sm-min}) {
+       @content;
+   }
+}
+
+// Medium devices
+@mixin md {
+   @media (max-width: #{$screen-md-min}) {
+       @content;
+   }
+}
+
+// Large devices
+@mixin lg {
+   @media (max-width: #{$screen-lg-min}) {
+       @content;
+   }
+}
+
+// Extra large devices
+@mixin xl {
+   @media (max-width: #{$screen-xl-min}) {
+       @content;
+   }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+   @media (max-width: $screen+'px') {
+       @content;
+   }
+}
+
+// use case:
+// @include sm {
+//         ...
+//     }

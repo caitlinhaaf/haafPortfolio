@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.link{
+  box-shadow: none;
+  border: none;
+  box-sizing: content-box;
+  // border-bottom: 5px solid white;
+  // padding: 1.25rem 2rem 1rem 2rem;
+  padding: 1.5rem;
+
+  list-style: none;
+  color: $dkgrey;
+
+  &:hover,
+  &:focus{
+    box-shadow: none;
+    color: $red;
+  }
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    box-shadow: none;
+    color: $dkred;
+  }
+  &.nav__button--current{
+    color: $red;
+    border-bottom: 5px solid $red;
+  }
+}

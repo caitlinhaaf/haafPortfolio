@@ -1,0 +1,40 @@
+@import "../../styles/variables";
+
+.light,
+.dark,
+.outline{
+  min-width: 12rem;
+  // margin-right: 1rem;
+  box-shadow: $bottomShadow;
+
+  padding: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover{
+    box-shadow: $bottomShadowHover;
+  }
+  > *{
+    display: block;
+  }
+  img{
+    width: auto;
+    height: 1.5rem;
+    margin-right: 1rem;
+  }
+
+  @include md {
+    min-width: 20rem;
+  }
+}
+
+.light{
+  @include style($ltstyle...);
+}
+
+.dark{
+  @include style($dkstyle...);
+  background-image: $gradientBg;
+}
