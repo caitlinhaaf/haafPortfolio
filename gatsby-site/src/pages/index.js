@@ -49,6 +49,29 @@ export default () => (
 
         <section className="about--grid">
           <section>
+              <AboutHeader header="Work History">
+                <CircleIcon
+                  iconSrc="./imgs/briefcase.svg"
+                  iconAlt="Briefcase"/>
+                </AboutHeader>
+
+                <JobListing
+                  title="Software Developer"
+                  location="FlightSafety International"
+                  date="April 2016 - July 2019"/>
+
+                <JobListing
+                  title="Peer Tutor"
+                  location="Sheridan College"
+                  date="November 2015 - April 2016"/>
+
+                <JobListing
+                  title="Courseware Developer &amp; Designer"
+                  location="FlightSafety International"
+                  date="May 2012 - August 2016"/>
+            </section>
+
+          <section>
             <AboutHeader header="Education">
               <CircleIcon
                 iconSrc="./imgs/gradcap.svg"
@@ -56,39 +79,22 @@ export default () => (
             </AboutHeader>
 
             <JobListing
+              title="Software Development - Cohort 8"
+              location="Bridge School"
+              date="2019"/>
+
+            <JobListing
               title="Interactive Media Management"
               location="Sheridan College"
               date="2015-2016"/>
 
             <JobListing
-              title="Bahelor Applied Arts - Illustration"
+              title="Bachelor of Applied Arts - Illustration"
               location="Sheridan College"
               date="2008-2012"/>
-
           </section>
 
-          <section>
-            <AboutHeader header="Work History">
-              <CircleIcon
-                iconSrc="./imgs/briefcase.svg"
-                iconAlt="Briefcase"/>
-              </AboutHeader>
-
-              <JobListing
-                title="Software Developer I"
-                location="FlightSafety International"
-                date="April 2016 - present"/>
-
-              <JobListing
-                title="Peer Tutor"
-                location="Sheridan College"
-                date="November 2015 - April 2016"/>
-
-              <JobListing
-                title="Courseware Developer &amp; Designer"
-                location="FlightSafety International"
-                date="May 2012 - August 2016"/>
-          </section>
+          
         </section>
 
       </BodySection>

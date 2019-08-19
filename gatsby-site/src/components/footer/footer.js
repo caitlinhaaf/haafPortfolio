@@ -4,6 +4,6 @@ import componentStyles from "./footer.module.scss"
 
 export default props => (
   <footer className={componentStyles.content}>
-    Built with GatsbyJS. All content &copy; Caitlin Haaf {new Date().getFullYear()}
+    Built with GatsbyJS. &copy; Caitlin Haaf {new Date().getFullYear()}
   </footer>
 )
