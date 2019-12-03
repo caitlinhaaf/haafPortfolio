@@ -1,0 +1,158 @@
+@import "variables";
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+BODY STYLES
+*/
+*,
+body{
+  box-sizing: border-box;
+  font: $bodyFont;
+  transition: all .4s;
+}
+body{
+  margin: 0;
+  background: #efefef;
+}
+
+.bodyColumn{
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,.1);
+
+  @include md {
+    width: 100%;
+  }
+}
+
+
+/*
+HEADERS
+*/
+
+h1{
+  font: $hdrFont;
+  margin: 0;
+  color: white;
+  @include md {
+    font-size: 3.5rem;
+  }
+}
+h2{
+  font: $subHdrFont;
+  color: $red;
+  margin-bottom: .5rem;
+  @include md {
+    font-size: 1.5rem;
+  }
+}
+h3{
+  font: $smHdrFont;
+  color: $medgrey;
+}
+h2, h3{
+  margin: 0 0 1rem 0;
+}
+h4{
+  font: normal 700 1rem/1.2em 'Source Sans Pro', sans-serif;
+  color: $red;
+  margin: 0;
+}
+
+a,
+a *{
+  text-decoration: none;
+}
+
+hr{
+  // border: 1px solid white;
+  background-color: white;
+  // box-shadow: $bottomShadow;
+}
+
+
+button{
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
+
+
+.section--btnGroup{
+  display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
+
+  > *{
+    margin-right: .75rem;
+    margin-bottom: .75rem;
+  }
+
+  @include md {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+.about--grid{
+  display: flex;
+  // justify-content: space-between;
+
+  > *:first-child{
+    margin-right: 3rem;
+  }
+
+  @include md {
+    flex-flow: column;
+    // align-items: center;
+  }
+
+}

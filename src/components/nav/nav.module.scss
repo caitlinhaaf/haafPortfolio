@@ -1,0 +1,26 @@
+@import "../../styles/variables";
+
+.main{
+  position: fixed;
+  top: 0;
+  background: white;
+  width: 100%;
+  padding: 0 1rem;
+  box-shadow: $bottomShadow;
+  z-index: 2;
+}
+
+.buttonContainer{
+  // width: 80%;
+  // max-width: 1200px;
+  // margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  @include md {
+    justify-content: center;
+  }
+  a{
+    text-decoration: none;
+    background-origin: 0;
+  }
+}

@@ -1,0 +1,36 @@
+.row{
+  // position: relative;
+  &::before{
+    content: '';
+    // position: absolute;
+    position: relative;
+    display: block;
+    height: 3rem;
+    top: -3rem;
+    left: 0;
+    width: 100%;
+    // background-color: pink;
+  }
+}
+
+.white{
+  padding: 3rem 2rem;
+  background: white;
+}
+
+.grey{
+  padding: 3rem 2rem;
+  background: #EEE;
+}
+
+.dark{
+  padding: 3rem 2rem;
+  background-image: url("./geometricBg.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  *{
+    color: white;
+  }
+}
