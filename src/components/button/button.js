@@ -2,16 +2,16 @@ import React from "react"
 
 import componentStyles from "./button.module.scss"
 
-export default props => (
+export default ({buttonStyle,buttonIcon,iconAlt,buttonTxt,...props}) => (
   <button
     type="submit"
     className={
-      (props.buttonStyle==="light") ? componentStyles.light :
+      (buttonStyle==="light") ? componentStyles.light :
       componentStyles.dark
     }>
-    {props.buttonIcon &&
-      <img src={props.buttonIcon} alt={props.iconAlt}/>
+    {buttonIcon &&
+      <img src={buttonIcon} alt={iconAlt}/>
     }
-    <span>{props.buttonTxt}</span>
+    <span>{buttonTxt}</span>
   </button>
 )

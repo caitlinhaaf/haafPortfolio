@@ -1,0 +1,17 @@
+@import "../../styles/variables";
+
+.slideshowContainer{
+    display: flex;
+    align-items: center;
+}
+
+.button{
+    color: $red;
+    border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 2rem;
+    background-color: transparent;
+    &:focus{
+        border: 1px solid $red;
+        outline: none;
+    }
+}

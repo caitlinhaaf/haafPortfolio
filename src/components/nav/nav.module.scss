@@ -11,9 +11,6 @@
 }
 
 .buttonContainer{
-  // width: 80%;
-  // max-width: 1200px;
-  // margin: 0 auto;
   display: flex;
   justify-content: flex-end;
   @include md {
@@ -22,5 +19,8 @@
   a{
     text-decoration: none;
     background-origin: 0;
+  }
+  a:focus{
+    outline: none;
   }
 }

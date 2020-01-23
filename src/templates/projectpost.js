@@ -3,7 +3,8 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../layouts/layout"
 import SEO from "../components/seo"
-// import { rhythm, scale } from "../utils/typography"
+import BodySection from "../components/bodySection/bodySection"
+import Btn from "../components/button/button"
 
 class ProjectPostTemplate extends React.Component {
   render() {
@@ -17,24 +18,36 @@ class ProjectPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <article>
-          <header>
-            <h1
-            >
-              {post.frontmatter.title}
-            </h1>
-            <p
-            >
-              {post.frontmatter.date}
-            </p>
-          </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
-          <hr
-          />
+        <BodySection>
+          <article>
+            <header>
+              <h1>{post.frontmatter.title}</h1>
+              <div className="flexContainer">
+                <form action={post.frontmatter.siteLink} method="get" target="_blank">
+                  <Btn
+                    buttonTxt="View Project"
+                    buttonStyle="dark"
+                    // buttonIcon="imgs/email.svg"
+                    iconAlt="External link icon"/>
+                </form>
+                <form action={post.frontmatter.githubLink} method="get" target="_blank">
+                  <Btn
+                    buttonTxt="View on Github"
+                    buttonStyle="dark"
+                    // buttonIcon="imgs/email.svg"
+                    iconAlt="Github logo"/>
+                </form>
+              </div>
+              <p
+              >
+                {post.frontmatter.date}
+              </p>
+            </header>
+            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          </article>
+        </BodySection>
 
-        </article>
-
-        <nav>
+        <nav style={{backgroundColor: `white`, padding: `1rem`}}>
           <ul
             style={{
               display: `flex`,
@@ -46,18 +59,22 @@ class ProjectPostTemplate extends React.Component {
           >
             <li>
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
+                <>
                   Previous Project<br/>
-                  ← {previous.frontmatter.title}
-                </Link>
+                  <Link to={previous.fields.slug} rel="prev">
+                    &lt; {previous.frontmatter.title}
+                  </Link>
+                </>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
+                <>
                   Next Project<br/>
-                  {next.frontmatter.title} →
-                </Link>
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} &gt;
+                  </Link>
+                </>
               )}
             </li>
           </ul>
@@ -84,6 +101,8 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        siteLink
+        githubLink
       }
     }
   }

@@ -3,8 +3,8 @@ import React from "react"
 import Layout from "../layouts/layout"
 import SkillsGroup from "../layouts/skillsGroup/skillsGroup.js"
 import BodySection from "../components/bodySection/bodySection.js"
-import ProjectTile from "../components/projectTile/projectTile"
 import Btn from "../components/button/button.js"
+import ProjectSlideshow from "../components/projectSlideshow/projectSlideshow"
 
 // import CircleIcon from "../components/circleIcon/circleIcon.js"
 // import JobListing from "../components/jobListing/jobListing.js"
@@ -47,6 +47,7 @@ class Homepage extends React.Component {
             <SkillsGroup groupName="Development Tools">
               <SkillIcon iconSrc="imgs/gitLogo.svg" iconAlt="Git Logo" skillTxt="Git"/>
               <SkillIcon iconSrc="imgs/gulpLogo.svg" iconAlt="Gulp Logo" skillTxt="Gulp"/>
+              <SkillIcon iconSrc="imgs/netlifyLogo.svg" iconAlt="Netlify Logo" skillTxt="Netlify"/>
               <SkillIcon iconSrc="imgs/npmLogo.svg" iconAlt="NPM Logo" skillTxt="NPM"/>
               <SkillIcon iconSrc="imgs/sassLogo.svg" iconAlt="Sass Logo" skillTxt="Sass"/>
               <SkillIcon iconSrc="imgs/sourcetreeLogo.svg" iconAlt="Sourcetree Logo" skillTxt="Sourcetree"/>
@@ -76,16 +77,7 @@ class Homepage extends React.Component {
         <BodySection
           sectionID="work"
           sectionHdr="Work">
-          {
-            projects.map(({node})=> (
-              <ProjectTile 
-                key={node.fields.slug}
-                date={node.frontmatter.date}
-                title={node.frontmatter.title}
-                description={node.excerpt}
-                slug={node.fields.slug}/>
-            ))
-          }
+          <ProjectSlideshow slideshowArr={projects}/>
         </BodySection>
 
         {/* CONTACT */}
@@ -96,7 +88,7 @@ class Homepage extends React.Component {
             Think you have a project or opportunity that I would be a good fit for?<br/>I would love to meet up for a coffee, or simply a chat!
           </p>
 
-          <section className="section--btnGroup">
+          <section className="flexContainer">
             <form
               action="mailto:me@caitlinhaaf.com" method="post">
               <Btn
@@ -157,80 +149,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-
-// import React from "react"
-// import { Link, graphql } from "gatsby"
-
-// import Bio from "../components/bio"
-// import Layout from "../components/layout"
-// import SEO from "../components/seo"
-// import { rhythm } from "../utils/typography"
-
-// class BlogIndex extends React.Component {
-//   render() {
-//     const { data } = this.props
-//     const siteTitle = data.site.siteMetadata.title
-//     const posts = data.allMarkdownRemark.edges
-
-//     return (
-//       <Layout location={this.props.location} title={siteTitle}>
-//         <SEO title="All posts" />
-//         <Bio />
-//         {posts.map(({ node }) => {
-//           const title = node.frontmatter.title || node.fields.slug
-//           return (
-//             <article key={node.fields.slug}>
-//               <header>
-//                 <h3
-//                   style={{
-//                     marginBottom: rhythm(1 / 4),
-//                   }}
-//                 >
-//                   <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-//                     {title}
-//                   </Link>
-//                 </h3>
-//                 <small>{node.frontmatter.date}</small>
-//               </header>
-//               <section>
-//                 <p
-//                   dangerouslySetInnerHTML={{
-//                     __html: node.frontmatter.description || node.excerpt,
-//                   }}
-//                 />
-//               </section>
-//             </article>
-//           )
-//         })}
-//       </Layout>
-//     )
-//   }
-// }
-
-// export default BlogIndex
-
-// export const pageQuery = graphql`
-//   query {
-//     site {
-//       siteMetadata {
-//         title
-//       }
-//     }
-//     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-//       edges {
-//         node {
-//           excerpt
-//           fields {
-//             slug
-//           }
-//           frontmatter {
-//             date(formatString: "MMMM DD, YYYY")
-//             title
-//             description
-//           }
-//         }
-//       }
-//     }
-//   }
-// `

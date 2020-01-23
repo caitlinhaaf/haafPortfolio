@@ -4,8 +4,6 @@
   box-shadow: none;
   border: none;
   box-sizing: content-box;
-  // border-bottom: 5px solid white;
-  // padding: 1.25rem 2rem 1rem 2rem;
   padding: 1.5rem;
 
   list-style: none;
@@ -16,11 +14,11 @@
     box-shadow: none;
     color: $red;
   }
-  &:focus{
-    outline: none;
-  }
+  // &:focus{
+  //   outline: none;
+  // }
   &:active{
-    box-shadow: none;
+    // box-shadow: none;
     color: $dkred;
   }
   &.nav__button--current{

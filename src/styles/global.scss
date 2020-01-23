@@ -59,37 +59,46 @@ body{
 }
 body{
   margin: 0;
-  background: #efefef;
+  // background: #efefef;
+}
+
+article{
+  h1{
+    font-size: 3rem;
+  }
+  h3{
+    margin-top: 2rem;
+  }
+
 }
 
 .bodyColumn{
-  width: 80%;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 
-  box-shadow: 0px 0px 10px 10px rgba(0,0,0,.1);
+  box-shadow: 0px 0px 10px 10px rgba(0,0,0,.02);
 
   @include md {
     width: 100%;
   }
 }
 
-
 /*
 HEADERS
 */
-
+h1, h2, h3, h4, h5, h6{
+  color: $red;
+}
 h1{
   font: $hdrFont;
   margin: 0;
-  color: white;
   @include md {
     font-size: 3.5rem;
   }
 }
 h2{
   font: $subHdrFont;
-  color: $red;
   margin-bottom: .5rem;
   @include md {
     font-size: 1.5rem;
@@ -97,10 +106,9 @@ h2{
 }
 h3{
   font: $smHdrFont;
-  color: $medgrey;
 }
 h2, h3{
-  margin: 0 0 1rem 0;
+  margin: 0 0 .5rem 0;
 }
 h4{
   font: normal 700 1rem/1.2em 'Source Sans Pro', sans-serif;
@@ -110,7 +118,8 @@ h4{
 
 a,
 a *{
-  text-decoration: none;
+  // text-decoration: none;
+  color: $red;
 }
 
 hr{
@@ -119,17 +128,18 @@ hr{
   // box-shadow: $bottomShadow;
 }
 
-
 button{
   padding: 1rem 2rem;
   cursor: pointer;
 }
 
 
-.section--btnGroup{
+.flexContainer{
   display: flex;
   // justify-content: center;
   flex-wrap: wrap;
+  margin: 1rem 0;
+  align-items: stretch;
 
   > *{
     margin-right: .75rem;

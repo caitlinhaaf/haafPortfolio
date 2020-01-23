@@ -1,6 +1,19 @@
 @import "../../styles/variables";
 
 .tile{
-    border: 1px solid $medgrey;
+    // border: 1px solid $medgrey;
     padding: 2rem;
+}
+
+.date{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.link{
+    display: block;
+    margin-top: 1rem;
+    color: $red;
+    text-decoration: underline;
 }
