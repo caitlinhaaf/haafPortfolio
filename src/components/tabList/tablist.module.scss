@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.tabContainer{
+    margin-bottom: 2rem;
+}
+
+.tab{
+    background: transparent;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    margin-right: 2rem;
+    border-bottom: $borderFocusNeutral;
+
+    &:focus{
+        outline: 0;
+        border-bottom: $borderFocusWhite;
+    }
+    &.active{
+        border-bottom: $borderFocusWhite;
+    }
+}

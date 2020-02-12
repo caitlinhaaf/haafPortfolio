@@ -3,28 +3,23 @@ import NavBtn from "../navButton/navButton.js"
 
 import componentStyles from "./nav.module.scss"
 
-if (typeof window !== "undefined") {
-  // eslint-disable-next-line
-  // require("smooth-scroll")('a[href*="#"]')
-  
-  // eslint-disable-next-line
-  require("smooth-scroll")('a[href*="#"]')
+export default ({colorVariation, ...props}) => {
+  const colorMode = colorVariation===`dark` ? `dark` : `light`;
+  return(
+    <nav className={
+      colorMode===`dark` ? `${componentStyles.main}` : `${componentStyles.main} ${componentStyles.light}`
+      }>
+      <section className={componentStyles.buttonContainer}>
+
+        <NavBtn colorVariation={colorMode} linkTxt="home" pageLink="/"/>
+
+        <NavBtn colorVariation={colorMode} linkTxt="about" pageLink="/about"/>
+
+        <NavBtn colorVariation={colorMode} linkTxt="projects" pageLink="/projects"/>
+
+        <NavBtn colorVariation={colorMode} linkTxt="contact" pageLink="/contact"/>
+      </section>
+    </nav>
+  )
+
 }
-
-export default () => (
-
-  <nav className={componentStyles.main}>
-    <section className={componentStyles.buttonContainer}>
-
-      <NavBtn btnId="about"/>
-
-      <NavBtn btnId="skills"/>
-
-      <NavBtn btnId="work"/>
-
-      <NavBtn btnId="contact"/>
-
-    </section>
-  </nav>
-
-)

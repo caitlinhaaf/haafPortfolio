@@ -74,10 +74,10 @@ article{
 
 .bodyColumn{
   width: 90%;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-
-  box-shadow: 0px 0px 10px 10px rgba(0,0,0,.02);
+  padding: 4rem 0;
+  // box-shadow: 0px 0px 10px 10px rgba(0,0,0,.02);
 
   @include md {
     width: 100%;
@@ -122,21 +122,13 @@ a *{
   color: $red;
 }
 
-hr{
-  // border: 1px solid white;
-  background-color: white;
-  // box-shadow: $bottomShadow;
-}
-
 button{
   padding: 1rem 2rem;
   cursor: pointer;
 }
 
-
 .flexContainer{
   display: flex;
-  // justify-content: center;
   flex-wrap: wrap;
   margin: 1rem 0;
   align-items: stretch;
@@ -154,15 +146,11 @@ button{
 
 .about--grid{
   display: flex;
-  // justify-content: space-between;
-
   > *:first-child{
     margin-right: 3rem;
   }
 
   @include md {
     flex-flow: column;
-    // align-items: center;
   }
-
 }

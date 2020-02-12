@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import componentStyles from "./projectTile.module.scss"
 
-export default ({title,date,description,slug,...props}) => (
+export default ({title, date, description, slug, ...props}) => (
     <div className={componentStyles.tile}>
         <h2>{title}</h2>
         <span className={componentStyles.date}>{date}</span>

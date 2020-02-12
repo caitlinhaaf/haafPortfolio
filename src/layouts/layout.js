@@ -7,20 +7,20 @@ import Footer from "../components/footer/footer.js";
 
 class Layout extends React.Component {
   render() {
-    const { children, header, title } = this.props
+    const { children, splashPage, title } = this.props
 
     return (
       <div>
-        <Nav/>
+        <Nav colorVariation={splashPage ? `dark` : `light`}/>
         <SEO title={title} />
-
-        { header && <Header/> }
+      
+        { splashPage && <Header/> }
 
         <main className="bodyColumn">
           {children}
         </main>
 
-        <Footer/>
+        <Footer colorVariation={splashPage ? `dark` : `light`}/>
       </div>
     )
   }

@@ -47,7 +47,7 @@ class ProjectPostTemplate extends React.Component {
           </article>
         </BodySection>
 
-        <nav style={{backgroundColor: `white`, padding: `1rem`}}>
+        <nav style={{backgroundColor: `white`, padding: `1rem 0`}}>
           <ul
             style={{
               display: `flex`,
@@ -60,7 +60,7 @@ class ProjectPostTemplate extends React.Component {
             <li>
               {previous && (
                 <>
-                  Previous Project<br/>
+                  <span style={{color: `#999`}}>Previous Project</span><br/>
                   <Link to={previous.fields.slug} rel="prev">
                     &lt; {previous.frontmatter.title}
                   </Link>
@@ -70,7 +70,7 @@ class ProjectPostTemplate extends React.Component {
             <li>
               {next && (
                 <>
-                  Next Project<br/>
+                  <span style={{color: `#999`}}>Next Project</span><br/>
                   <Link to={next.fields.slug} rel="next">
                     {next.frontmatter.title} &gt;
                   </Link>

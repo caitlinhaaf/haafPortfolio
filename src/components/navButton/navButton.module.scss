@@ -1,28 +1,43 @@
 @import "../../styles/variables";
 
-.link{
-  box-shadow: none;
-  border: none;
-  box-sizing: content-box;
-  padding: 1.5rem;
+.pageLink{
 
-  list-style: none;
-  color: $dkgrey;
-
-  &:hover,
-  &:focus{
+  .link{
     box-shadow: none;
-    color: $red;
+    border: none;
+    box-sizing: content-box;
+    padding: 1.5rem;
+    list-style: none;
+    border-bottom: 3px solid rgba(0, 0, 0, 0);
+    color: white;
   }
-  // &:focus{
-  //   outline: none;
-  // }
+  .light{
+    color: $dkgrey;
+  }
+
+  &:hover > *,
+  &:focus > *{
+    box-shadow: none;
+    border-bottom: 3px solid white;
+  }
   &:active{
-    // box-shadow: none;
-    color: $dkred;
+    color: $dkgrey;
   }
-  &.nav__button--current{
+
+  &:hover > *.light,
+  &:focus > *.light{
     color: $red;
-    border-bottom: 5px solid $red;
+    border-bottom: 3px solid $red;
+  }
+  
+}
+
+
+.active > .link{
+  color: white;
+  border-bottom: 3px solid white;
+  &.light{
+    color: $dkred;
+    border-bottom: 3px solid $red;
   }
 }

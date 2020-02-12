@@ -3,11 +3,14 @@
 .main{
   position: fixed;
   top: 0;
-  background: white;
   width: 100%;
   padding: 0 1rem;
-  box-shadow: $bottomShadow;
   z-index: 2;
+}
+
+.light{
+  background: white;
+  box-shadow: $bottomShadow;
 }
 
 .buttonContainer{

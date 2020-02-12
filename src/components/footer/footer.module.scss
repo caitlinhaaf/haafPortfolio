@@ -1,9 +1,16 @@
 @import "../../styles/variables";
 
 .content{
-  font-size: .75rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: .6rem;
   text-align: center;
   padding: .25rem;
-  color: $medgrey;
+  color: white;
+}
+
+.light{
   background: white;
+  color: $medgrey;
 }

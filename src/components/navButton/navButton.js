@@ -3,15 +3,12 @@ import { Link } from "gatsby"
 
 import componentStyles from "./navButton.module.scss"
 
-if (typeof window !== "undefined") {
-  require("smooth-scroll")('a[href*="#"]')
-}
-
-export default props => (
-  <Link to={"/#section-" + props.btnId}>
-    <li className={componentStyles.link}>
-        {props.btnId.toUpperCase()}
+export default ({colorVariation, ...props}) => (
+  <Link to={props.pageLink} className={componentStyles.pageLink} activeClassName={componentStyles.active}>
+    <li className={
+      colorVariation===`dark` ? `${componentStyles.link}` : `${componentStyles.link} ${componentStyles.light}`
+    }>
+        {props.linkTxt.toUpperCase()}
     </li>
   </Link>
-
 )
