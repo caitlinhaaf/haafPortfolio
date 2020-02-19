@@ -1,0 +1,125 @@
+@import "../../../styles/variables";
+.outline{
+    fill:none;
+    // stroke:#000;
+    stroke: $red;
+    stroke-miterlimit:
+    10;stroke-width:5px;
+}
+.redFill{
+    fill: $red;
+}
+.nib{
+    animation: nib 7s ease-in-out infinite;
+}
+.pointOne{
+    transform-origin: 12% 45%;
+    animation: pointOne 7s ease-in-out infinite;
+}
+.pointTwo{
+    transform-origin: 50% 5%;
+    animation: pointTwo 7s ease-in-out infinite;
+}
+.line{
+    transform-origin: 12% 50%;
+    animation: line 7s ease-in-out infinite;
+}
+
+@keyframes nib{
+    0%{
+        transform: translateY(0%) translateX(0%);
+    }
+    // animate to first point and click...
+    15%{
+        transform: translate(-32%, 16%);
+    }
+    20%{
+        transform: translate(-28%, 16%) scale(.9, .9);
+    }
+    25%{
+        transform: translate(-32%, 16%) scale(1, 1);
+    }
+    // animate to second point and click...
+    50%{
+        transform: translate(10%, -28%);
+    }
+    55%{
+        transform: translate(12%, -24%) scale(.9);
+    }
+    60%{
+        transform: translate(10%, -28%) scale(1, 1);
+    }
+    // back to start...
+    70%{
+        transform: translateY(0%) translateX(0%);
+    }
+    100%{
+        transform: translateY(0%) translateX(0%);
+    }
+}
+@keyframes pointOne{
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    // animate to first point and click...
+    20%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    25%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    // back to start...
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes pointTwo{
+    0%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    // animate to second point and click...
+    55%{
+        opacity: 0;
+        transform: scale(.5);
+    }
+    60%{
+        opacity: 1;
+        transform: scale(1);
+    }
+    // back to start...
+    90%{
+       opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+@keyframes line{
+    0%{
+        opacity: 0;
+        transform: scale(0)
+    }
+    // animate to first point and click...
+    25%{
+        transform: scale(0);
+    }
+    // animate to second point and click...
+    50%{
+        opacity: 1;
+        transform: scale(1)
+    }
+    // back to start...
+    70%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

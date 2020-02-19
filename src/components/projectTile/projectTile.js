@@ -5,11 +5,10 @@ import componentStyles from "./projectTile.module.scss"
 
 export default ({title, date, description, slug, ...props}) => (
     <div className={componentStyles.tile}>
-        <h2>{title}</h2>
+        <Link to={slug} style={{marginBottom: `.75rem`}}>
+            <span className={componentStyles.header}>{title}</span>
+        </Link>
         <span className={componentStyles.date}>{date}</span>
         <p dangerouslySetInnerHTML={{__html: description,}}></p>
-        <Link className={componentStyles.link} to={slug}>
-            Read More
-        </Link>
     </div>
 )

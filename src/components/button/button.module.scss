@@ -4,17 +4,17 @@
 .dark,
 .outline{
   min-width: 12rem;
-  // margin-right: 1rem;
   box-shadow: $bottomShadow;
-
   padding: 1rem;
-
   display: flex;
   justify-content: center;
   align-items: center;
 
-  &:hover{
+  &:hover,
+  &:focus{
+    outline: 0;
     box-shadow: $bottomShadowHover;
+    transform: translateY(-10%);
   }
   > *{
     display: block;

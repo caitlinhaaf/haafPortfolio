@@ -16,7 +16,6 @@ class ProjectsPage extends React.Component {
         <BodySection
           sectionID="work"
           sectionHdr="Projects">
-          {/* <ProjectSlideshow slideshowArr={projects}/> */}
           {projects.map((project, i) => (
             <ProjectTile 
             key={i}

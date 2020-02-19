@@ -22,7 +22,9 @@ class ProjectPostTemplate extends React.Component {
           <article>
             <header>
               <h1>{post.frontmatter.title}</h1>
+              <span>{post.frontmatter.date}</span>
               <div className="flexContainer">
+
                 <form action={post.frontmatter.siteLink} method="get" target="_blank">
                   <Btn
                     buttonTxt="View Project"
@@ -30,6 +32,7 @@ class ProjectPostTemplate extends React.Component {
                     // buttonIcon="imgs/email.svg"
                     iconAlt="External link icon"/>
                 </form>
+
                 <form action={post.frontmatter.githubLink} method="get" target="_blank">
                   <Btn
                     buttonTxt="View on Github"
@@ -37,11 +40,8 @@ class ProjectPostTemplate extends React.Component {
                     // buttonIcon="imgs/email.svg"
                     iconAlt="Github logo"/>
                 </form>
+                
               </div>
-              <p
-              >
-                {post.frontmatter.date}
-              </p>
             </header>
             <section dangerouslySetInnerHTML={{ __html: post.html }} />
           </article>
@@ -99,7 +99,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "MMMM YYYY")
         description
         siteLink
         githubLink

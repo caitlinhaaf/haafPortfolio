@@ -6,24 +6,116 @@
   width: 100%;
   padding: 0 1rem;
   z-index: 2;
-}
-
-.light{
-  background: white;
-  box-shadow: $bottomShadow;
-}
-
-.buttonContainer{
+  min-height: 4rem;
   display: flex;
   justify-content: flex-end;
-  @include md {
-    justify-content: center;
+  align-items: stretch;
+
+  .hamburger{
+    display: none;
+    box-sizing: border-box;
+    position: relative;
+    padding: 1rem;
+    width: 4rem;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    background-color: transparent;
+    border: 2px solid rgba(0,0,0,0);
+    box-sizing: border-box;
+    // font-size: 2rem;
+    outline: 0;
+
+    &:focus{
+      border: 2px solid $red;
+    }
+
+    span{
+      display: block;
+      width: 100%;
+      height: .25rem;
+      border-radius: .5rem;
+      background-color: white;
+      &:nth-child(2){
+        margin: .25rem 0;
+      }
+    }
+    @include md {
+      display: block;
+    }
+    &.open{
+      span{
+        background-color: $red;
+        &:nth-child(3){
+          transform: rotate(-45deg) translate(.35rem, -.35rem);
+        }
+        &:nth-child(1){
+          transform: rotate(45deg) translate(.35rem, .35rem);
+        }
+        &:nth-child(2){
+          opacity: 0;
+        }
+      }
+    }
   }
-  a{
-    text-decoration: none;
-    background-origin: 0;
+
+  .buttonContainer{
+    display: flex;
+    justify-content: flex-end;
+    // transition: max-height .3s ease-in-out;
+    transition-property: max-height;
+    a{
+      text-decoration: none;
+      background-origin: 0;
+    }
+    a:focus{
+      outline: none;
+    }
+    @include md {
+      display: none;
+      // height: 0px; 
+      max-height: 0px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      background: white;
+      padding: 10vh 0;
+      transition-property: max-height;
+  
+      &.linksVisible{
+        display: block;
+        max-height: 100vh;
+        opacity: 1;
+      }
+    }
   }
-  a:focus{
-    outline: none;
+
+  // pages with light theme
+  // - light nav
+  // - dark menu on mobile
+  &.light{
+    background: white;
+    box-shadow: $bottomShadow;
+    .hamburger {
+      span{
+        background-color: $red;
+      }
+      &.open span{
+        background-color: white;
+      }
+    }
+    .buttonContainer{
+      @include md {
+        background: $red;
+      }
+    }
   }
+
 }
+
+

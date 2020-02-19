@@ -1,7 +1,6 @@
 @import "../../styles/variables";
 
 .pageLink{
-
   .link{
     box-shadow: none;
     border: none;
@@ -10,11 +9,18 @@
     list-style: none;
     border-bottom: 3px solid rgba(0, 0, 0, 0);
     color: white;
+     // switch color pallete for mobile menus
+    @include md {
+      color: $red;
+    }
   }
   .light{
     color: $dkgrey;
+    // switch color pallete for mobile menus
+    @include md {
+      color: white;
+    }
   }
-
   &:hover > *,
   &:focus > *{
     box-shadow: none;
@@ -23,21 +29,25 @@
   &:active{
     color: $dkgrey;
   }
-
   &:hover > *.light,
   &:focus > *.light{
     color: $red;
     border-bottom: 3px solid $red;
   }
-  
 }
 
 
 .active > .link{
   color: white;
   border-bottom: 3px solid white;
+  @include md {
+    color: $red;
+  }
   &.light{
     color: $dkred;
     border-bottom: 3px solid $red;
+    @include md {
+      color: white;
+    }
   }
 }

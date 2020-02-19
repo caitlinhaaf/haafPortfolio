@@ -8,7 +8,7 @@ export default props => (
 
     <section className={componentStyles.content}>
       <h1>Caitlin Haaf</h1>
-      <h2>Front End Developer</h2>
+      <h3>Front End Developer</h3>
 
       <span></span>
       <span></span>

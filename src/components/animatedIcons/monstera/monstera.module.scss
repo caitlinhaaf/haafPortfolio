@@ -1,0 +1,70 @@
+@import "../../../styles/variables";
+
+.redFill{
+    fill: $red;
+}
+
+.frontLeaf{
+    transform-origin: 50% 15%;
+    animation: leafShake 4s ease-in-out infinite;
+}
+
+.backLeaf{
+    transform-origin: 75% 5%;
+    transform: translate(.5rem, -.5rem);
+    animation: backLeafShake 4s ease-in-out infinite;
+}
+
+@keyframes leafShake{
+    0%{
+        transform: rotate(0);
+    }
+    20%{
+        transform: rotate(0);
+    }
+    30%{
+        transform: rotate(-2deg);
+    }
+    45%{
+        transform: rotate(2deg);
+    }
+    65%{
+        transform: rotate(-2deg);
+    }
+    85%{
+        transform: rotate(2deg);
+    }
+    95%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes backLeafShake{
+    0%{
+        transform: translate(.5rem, -.5rem);
+    }
+    20%{
+        transform: translate(.5rem, -.5rem) rotate(0);
+    }
+    30%{
+        transform: translate(.5rem, -.5rem) rotate(2deg);
+    }
+    45%{
+        transform: translate(.5rem, -.5rem) rotate(-.5deg);
+    }
+    65%{
+        transform: translate(.5rem, -.5rem) rotate(2deg);
+    }
+    85%{
+        transform: translate(.5rem, -.5rem) rotate(-.5deg);
+    }
+    95%{
+        transform: translate(.5rem, -.5rem)rotate(0);
+    }
+    100%{
+        transform: translate(.5rem, -.5rem)rotate(0);
+    }
+}

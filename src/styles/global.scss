@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+  font-size: 16px;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -32,8 +32,12 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
-ol, ul {
-	list-style: none;
+strong{
+  font-weight: bolder;
+}
+ul{
+  list-style: square;
+  padding-left: 1.2rem;
 }
 blockquote, q {
 	quotes: none;
@@ -59,7 +63,6 @@ body{
 }
 body{
   margin: 0;
-  // background: #efefef;
 }
 
 article{
@@ -72,22 +75,26 @@ article{
 
 }
 
+blockquote{
+  color: $medgrey;
+  font-style: italic;
+  padding: 1rem;
+  margin: 1rem auto;
+  border: 1px solid $medgrey;
+  // font-size: 1.25rem;
+}
+
 .bodyColumn{
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
   padding: 4rem 0;
-  // box-shadow: 0px 0px 10px 10px rgba(0,0,0,.02);
-
-  @include md {
-    width: 100%;
-  }
 }
 
 /*
 HEADERS
 */
-h1, h2, h3, h4, h5, h6{
+h1, h2{
   color: $red;
 }
 h1{
@@ -100,9 +107,9 @@ h1{
 h2{
   font: $subHdrFont;
   margin-bottom: .5rem;
-  @include md {
-    font-size: 1.5rem;
-  }
+  // @include md {
+  //   font-size: 1.5rem;
+  // }
 }
 h3{
   font: $smHdrFont;
@@ -115,11 +122,44 @@ h4{
   color: $red;
   margin: 0;
 }
-
-a,
-a *{
-  // text-decoration: none;
+main a{
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  z-index: 1;
   color: $red;
+  padding: 0 .25rem;
+  *{
+    color: $red;
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    max-height: 2px;
+    // background-color: $red;
+    background-image: $gradientAngleBg;
+    // bottom: -0.25rem;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .3s ease-in-out;
+  }
+  &:hover, &:focus{
+    color: white;
+    outline: none;
+    *{
+      color: white;
+    }
+    &::after{
+      // height: 125%;
+      // max-height: 200%;
+      height: 100%;
+      max-height: 100%;
+      background-image: $gradientBg;
+    }
+  }
 }
 
 button{

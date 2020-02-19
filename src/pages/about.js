@@ -6,22 +6,53 @@ import Tablist from "../components/tablist/tablist.js"
 import BodySection from "../components/bodySection/bodySection.js"
 import SkillIcon from "../components/skillIcon/skillIcon.js"
 
+import Yarn from "../components/animatedIcons/yarn/yarn.js"
+import PenNib from "../components/animatedIcons/penNib/penNib.js"
+import Monstera from "../components/animatedIcons/monstera/monstera.js"
+
 function AboutPage({...props}) {
     return(
       <Layout title="About">
-        <BodySection
-          sectionHdr="Hello!">
-          <p>
-            I'm Caitlin, a front-end developer based out of Toronto with a background in graphic design and motion graphics.
-            <br/><br/>
-            When not at work, you will find me working on a new craft project, listening to a true crime podcast, or walking my hound dogs through High Park.
-          </p>
+        <BodySection sectionHdr="Hello!" className="flexContainer">
+          <div 
+          // style={{width: `60%`}}
+          >
+              <p>
+              I'm Caitlin, a front-end developer based out of Toronto.
+              <br/><br/>
+              I'm an alumnus of Sheridan College <a href="http://www.sheridanillustration.com/" rel="noopener noreferrer" target="_blank">Bachelor of Illustration</a> and <a href="https://academics.sheridancollege.ca/programs/interactive-media-management" rel="noopener noreferrer" target="_blank">Interactive Media Management</a> programs, and <a href="https://bridgeschool.io/" rel="noopener noreferrer" target="_blank">Bridge School</a> Software Development (Cohort 9). 
+              <br/><br/>
+
+              <a href="https://www.canadalearningcode.ca/" rel="noopener noreferrer" target="_blank">Canada Learning Code</a>
+              <a href="https://toronto.coderdojo.ca/" rel="noopener noreferrer" target="_blank">Toronto branch of CoderDojo</a>
+              {/* <br/><br/>
+              When I'm not in front of my computer, you will likely find me working on a new craft project, caring for my large plant collection, listening to a true crime podcast, or walking my two rescue dogs through High Park. */}
+            </p>
+
+
+            <h3 style={{marginTop: `1rem`}}>I'm Always Happy to Chat About...</h3>
+            <div style={{display: `flex`}}>
+              <div style={{width: `6rem`}}>
+                <Yarn/>
+                <span style={{display: `block`,textAlign: `center`}}>Crafting</span>
+              </div>
+              <div style={{width: `6rem`}}>
+                <Monstera/>
+                <span style={{display: `block`,textAlign: `center`}}>Plants</span>
+              </div>
+              <div style={{width: `6rem`}}>
+                <PenNib/>
+                <span style={{display: `block`,textAlign: `center`}}>SVG Animations</span>
+              </div>
+             
+            </div>
+            
+          </div>
         </BodySection>
 
         {/* SKILLS */}
-
         <BodySection sectionStyle="dark">
-          <Tablist tabsArr={[`Technical Skills`, `Development Tools`, `Currently Learning`]}>
+          <Tablist tabsArr={[`Technical Skills`, `Design Tools`, `Development Tools`, `Currently Learning`]}>
             <SkillsGroup groupName="Technical Skills">
               <SkillIcon iconSrc="imgs/HTML5logo.svg" iconAlt="HTML 5 Logo" skillTxt="HTML"/>
               <SkillIcon iconSrc="imgs/CSS3logo.svg" iconAlt="CSS 3 Logo" skillTxt="CSS"/>
@@ -30,6 +61,16 @@ function AboutPage({...props}) {
               <SkillIcon iconSrc="imgs/reactIcon.svg" iconAlt="ReactJS Logo" skillTxt="ReactJS"/>
               <SkillIcon iconSrc="imgs/reduxLogo.svg" iconAlt="Redux Logo" skillTxt="Redux"/>
               <SkillIcon iconSrc="imgs/nodeLogo.svg" iconAlt="NodeJS Logo" skillTxt="NodeJS"/>
+            </SkillsGroup>
+
+            <SkillsGroup groupName="Design Tools">
+              <SkillIcon iconSrc="imgs/afterEffectsLogo.svg" iconAlt="Adobe After Effects Logo" skillTxt="After Effects"/>
+              <SkillIcon iconSrc="imgs/afterEffectsLogo.svg" iconAlt="Adobe After Effects Logo" skillTxt="After Effects"/>
+              <SkillIcon iconSrc="imgs/illustratorLogo.svg" iconAlt="Adobe Illustrator Logo" skillTxt="Illustrator"/>
+              <SkillIcon iconSrc="imgs/invision-seeklogo.com.svg" iconAlt="Invision Logo" skillTxt="Invision"/>
+              <SkillIcon iconSrc="imgs/photoshopLogo.svg" iconAlt="Adobe Photoshop Logo" skillTxt="Photoshop"/>
+              <SkillIcon iconSrc="imgs/premiereLogo.svg" iconAlt="Adobe Premier Logo" skillTxt="Premiere"/>
+              <SkillIcon iconSrc="imgs/xdLogo.svg" iconAlt="Adobe Experience Designer Logo" skillTxt="Xd"/>
             </SkillsGroup>
 
             <SkillsGroup groupName="Development Tools">

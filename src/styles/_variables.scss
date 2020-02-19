@@ -15,13 +15,14 @@ FONTS
 @import url("https://fonts.googleapis.com/css?family=Montserrat+Alternates:300|Source+Sans+Pro:400,700");
 
 $hdrFont: normal 300 5rem/1.2em 'Montserrat Alternates', sans-serif;
-$subHdrFont: normal 300 2rem/1.2em 'Montserrat Alternates', sans-serif;
-$smHdrFont: normal 300 1.2rem/1.2em 'Montserrat Alternates', sans-serif;
+$subHdrFont: normal 300 3rem/1.2em 'Montserrat Alternates', sans-serif;
+$smHdrFont: normal 300 1.5rem/1.2em 'Montserrat Alternates', sans-serif;
 $bodyFont: normal 400 1rem/1.2em 'Source Sans Pro', sans-serif;
 
 $bottomShadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.2);
 $bottomShadowHover: 0px 2px 6px 2px rgba(0,0,0,.2);
-$gradientBg: linear-gradient($red, $dkred);
+$gradientBg: linear-gradient($red, $dkrred);
+$gradientAngleBg: linear-gradient(to left, $red, $dkrred);
 
 $borderFocusNeutral: 3px solid rgba(0,0,0,0);
 $borderFocusWhite: 3px solid white;

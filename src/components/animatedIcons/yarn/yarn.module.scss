@@ -1,0 +1,75 @@
+@import "../../../styles/variables";
+
+.outline{
+    fill:none;
+    stroke: $red;
+    stroke-width:4px;
+
+    stroke-miterlimit:10;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+.whiteFill{
+    fill:#fff;
+}
+.redFill{
+    fill: $red;
+}
+.needleOne{
+    animation: needleOne 7s ease-in-out infinite;
+}
+.needleTwo{
+    animation: needleTwo 7s ease-in-out .5s infinite;
+}
+
+
+@keyframes needleOne{
+    0%{
+        opacity: 0;
+        transform: translateY(-10%) translateX(15%);
+
+    }
+    15%{
+        opacity: 1;
+        transform: translateY(5%) translateX(5%);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(5%) translateX(5%);
+    }
+    85%{
+        opacity: 0;
+        transform: translateY(-10%) translateX(15%);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-10%) translateX(15%);
+
+    }
+}
+@keyframes needleTwo{
+    0%{
+        opacity: 0;
+        transform: translateY(-8%) translateX(5%);
+
+    }
+    15%{
+        opacity: 1;
+        transform: translateY(5%) translateX(5%);
+    }
+    70%{
+        opacity: 1;
+        transform: translateY(5%) translateX(5%);
+    }
+    85%{
+        opacity: 0;
+        transform: translateY(-8%) translateX(5%);
+
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-8%) translateX(5%);
+
+    }
+}
