@@ -22,7 +22,6 @@ Once the client is ready to start adding different posts and page types,  [Netli
 Since the client wanted the ability to add various page types and content
 
 
-
 - Used JAM stack, with a combination of Gatsby JS and the Netlify, to build a custom front end to match the design
 - Netlify CMS allowing clients to easily make edits
 

@@ -1,40 +1,33 @@
 ---
+
 title: Virtual Grounds
 date: "2019-10-01T22:12:03.284Z"
 description: "Hello World"
 siteLink: "https://www.virtualgrounds.zone/"
 githubLink: "https://github.com/caitlinhaaf/virtualGroundsSeries"
+
 ---
 
-### The Clients
-Digital Justice Labs, Trinity Square Video
+###The Clients
+**[Digital Justice Labs](https://digitaljusticelab.ca/)** is a Troronto non-profit organization that examines the impact of technology on various communities with the aim of building a just and equitable digital future for everyone.
 
-### Description
-Virtual Grounds is an ongoing workshop series examining feminist perspectives on digital sustainability and survival. The clients came to me with a design by [Marcia Diaz](https://marciadiaz.myportfolio.com/)
+**[Trinity Square Video](https://www.trinitysquarevideo.com/)** is a Toronto arts organizaiton that provides artists with training and access to equipment to explore new media arts practices, including video and virtual/augmented reality.
 
-### Requirements
-- For each workshop, allow the client to create a page with all the 
-- Create a course content page with a master list of resources from all the workshops
+Both clients are collaborating on Virtual Grounds, an ongoing workshop series examining feminist perspectives on digital sustainability and survival. Participants receive training, mentorship, and a production allowance so that they can ultimately research and create their own multimedia art pieces.
 
-### Solution
-- Used JAM stack, with a combination of Gatsby JS and the Netlify, to build a custom front end to match the design
+###Description
+
+The clients came to me with a well realized design by [Marcia Diaz](https://marciadiaz.myportfolio.com/)
+- For each workshop, create a page with a workshop information and links to resources linked to from the "workshops" page
+- Have all workshop resources listed under a common "course content" page, sorted by resource type and workshop
+
+###Solution
+Since they had a very clear design in mind, I decided it was best to build the front-end from scratch, instead of trying to wrestle with an existing CMS template.
+
+Used JAMstack with a combination of [Gatsby JS](https://www.gatsbyjs.org/) on the front end and deployed using Netlify and the [Netlify CMS](https://www.netlifycms.org/).
+
 - Netlify CMS allowing clients to easily make edits
 - Resources from all workshops are aggregated on the course content pages
+- content schema
 
-
-<!-- This is my first post on my new fake blog! How exciting!
-
-I'm sure I'll write a lot more interesting things in the future.
-
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
-
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
-
-![Chinese Salty Egg](./salty_egg.jpg) -->
+###Takeaways
