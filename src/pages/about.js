@@ -2,7 +2,7 @@ import React from "react"
 
 import Layout from "../layouts/layout"
 import SkillsGroup from "../layouts/skillsGroup/skillsGroup.js"
-import Tablist from "../components/tablist/tablist.js"
+import Tablist from "../components/tabList/tablist.js"
 import BodySection from "../components/bodySection/bodySection.js"
 import SkillIcon from "../components/skillIcon/skillIcon.js"
 
